@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +15,11 @@ import { MyReservationsComponent } from './my-reservations/my-reservations.compo
     MyReservationsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+        {path: 'myreservations',component: MyReservationsComponent },
+        {path: 'availablecars', component: AvailableCarsComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
