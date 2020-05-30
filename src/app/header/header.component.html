@@ -1,5 +1,21 @@
-<ul>
-    <li><a href="#" [routerLink]="['/availablecars']">Availble cars</a></li>
-    <li><a href="#" [routerLink]="['/myreservations']">My reservations</a></li>
-    <li>Logout</li>    
-</ul>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="=navbar-brand" [routerLink]="['/']">Car rental</a>
+    <button class="navbar-toggler" type="="button (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+    <div ngbCollapse [ngbCollapse]="isMenuCollapsed" class="collapse navnar-collapse" id="navbarNav">
+    <ul ngbNav #nav="ngbNav" class="navbar-nav">
+        <li ngbNavItem>
+            <a ngbNavLink [routerLink]="['/availablecars']">Availble cars</a>
+        </li>
+
+        <li ngbNavItem>
+            <a ngbNavLink [routerLink]="['/myreservations']">My reservations</a>
+        </li>
+        
+        <li ngbNavItem>
+            <a ngbNavLink>Logout</a>
+        </li>
+
+    </ul>
+    </div>
+</nav>
