@@ -12,7 +12,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.logout.emit(null);
   }
 
+  onLogoutClicked(){
+    this.logout.emit(null);
+  }
 }
