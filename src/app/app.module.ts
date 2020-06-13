@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { AvailableCarsComponent } from './available-cars/available-cars.component';
 import { MyReservationsComponent } from './my-reservations/my-reservations.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarInfoComponent } from './car-info/car-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AvailableCarsComponent,
-    MyReservationsComponent
+    MyReservationsComponent,
+    CarInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyReservationService } from '../my-reservation.service';
 
 @Component({
   selector: 'app-my-reservations',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-reservations.component.css']
 })
 export class MyReservationsComponent implements OnInit {
-
-  constructor() { }
+  myreservation = [];
+  constructor(private myReservationService: MyReservationService) { }
 
   ngOnInit(): void {
+    this.myReservationService
+      .getMyReservation()
+      .subscribe(p => this.myreservation = p)
   }
-
 }
