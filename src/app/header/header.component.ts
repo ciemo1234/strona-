@@ -1,4 +1,5 @@
 import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
+import { AuthorizationService } from '../authorization.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isMenuCollapsed: boolean = true;
-  @Output() logout = new EventEmitter();
+  get isLoggedIn(){
+    return this.authorizationService.isLoggedIn;
+  }
 
-  constructor() { }
+  @Output() logout = new EventEmitter();
+  constructor(private authorizationService: AuthorizationService) { }
+
 
   ngOnInit(): void {
   }

@@ -1,0 +1,10 @@
+<div class="login">
+    <form class="form-signin">
+    <h1 class="h3 mb-3 front-weight-normal">Please sign in</h1>    
+    <input type="email" id="inputEmail" class="from-control"
+        placeholder="Email address" name="email" [(ngModel)]="email" required autofocus>    
+    <input type="password" id="inputPassword" class="from-control"        
+        placeholder="Password" name="password" [(ngModel)]="password" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()">Log in</button>
+    </form>
+</div>    

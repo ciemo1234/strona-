@@ -10,6 +10,7 @@ import { MyReservationsComponent } from './my-reservations/my-reservations.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarInfoComponent } from './car-info/car-info.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,17 @@ import { HomeComponent } from './home/home.component';
     AvailableCarsComponent,
     MyReservationsComponent,
     CarInfoComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
         {path: 'myreservations',component: MyReservationsComponent },
         {path: 'availablecars', component: AvailableCarsComponent },
+        {path: 'login' , component: LoginComponent},
+        {path: 'home' , component: HomeComponent},
+        {path: '**' , redirectTo: '/home' , pathMatch: 'full'}
     ]),
     NgbModule,
     FormsModule, ReactiveFormsModule
