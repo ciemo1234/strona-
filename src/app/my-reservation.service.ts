@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { Component } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
