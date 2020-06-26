@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthorizationService {
   logged = true;
-  get isLoggedIn(): boolean{
+  get isLoggedIn(): boolean {
     return this.logged;
   }
   logout(){

@@ -11,7 +11,7 @@ export class AppComponent {
   get isLoggedIn(){
     return this.authorizationService.isLoggedIn;
   }
-  constructor(private authorizationService: AuthorizationService) {}
+  constructor(private authorizationService: AuthorizationService) { }
   onLogout(){
     this.authorizationService.logout();
   }

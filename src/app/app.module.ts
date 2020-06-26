@@ -9,6 +9,7 @@ import { AvailableCarsComponent } from './available-cars/available-cars.componen
 import { MyReservationsComponent } from './my-reservations/my-reservations.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarInfoComponent } from './car-info/car-info.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarInfoComponent } from './car-info/car-info.component';
     HeaderComponent,
     AvailableCarsComponent,
     MyReservationsComponent,
-    CarInfoComponent
+    CarInfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
