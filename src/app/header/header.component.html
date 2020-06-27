@@ -9,7 +9,7 @@
             <li ngbNavItem *ngIf="isLoggedIn">
                 <a ngbNavLink [routerLink]="['/myreservations']">My reservations</a>
             </li>
-            <li ngbNavItem *ngIf="isLoggedIn">
+            <li ngbNavItem *ngIf="!isLoggedIn">
                 <a ngbNavLink [routerLink]="['/login']">Login</a>
             </li>
             <li ngbNavItem *ngIf="isLoggedIn">
