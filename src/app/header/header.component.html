@@ -6,18 +6,15 @@
             <li ngbNavItem>
                 <a ngbNavLink [routerLink]="['/availablecars']">Availble cars</a>
             </li>
-
             <li ngbNavItem *ngIf="isLoggedIn">
                 <a ngbNavLink [routerLink]="['/myreservations']">My reservations</a>
             </li>
             <li ngbNavItem *ngIf="isLoggedIn">
                 <a ngbNavLink [routerLink]="['/login']">Login</a>
             </li>
-
             <li ngbNavItem *ngIf="isLoggedIn">
                 <a ngbNavLink (click)="onLogoutClicked()">Logout</a>
             </li>
-
         </ul>
     </div>
 </nav>

@@ -8,17 +8,14 @@ import { AuthorizationService } from '../authorization.service';
 })
 export class HeaderComponent implements OnInit {
   isMenuCollapsed: boolean = true;
-  get isLoggedIn(){
+  get isLoggedIn() {
     return this.authorizationService.isLoggedIn;
   }
-
   @Output() logout = new EventEmitter();
   constructor(private authorizationService: AuthorizationService) { }
 
-
   ngOnInit(): void {
   }
-
   onLogoutClicked(){
     this.logout.emit(null);
   }
