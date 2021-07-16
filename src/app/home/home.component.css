@@ -1,0 +1,19 @@
+p{
+
+  display: contents;
+    margin-right: 25px;
+
+}
+body{
+
+  background-color: blue;
+}
+div{
+
+  justify-content: center;
+     align-items: center;
+     height: 100%;
+     text-align: center;
+
+}
+

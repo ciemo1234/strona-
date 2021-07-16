@@ -3,11 +3,12 @@ import {AuthorizationService} from './authorization.service';
 
 @Component({
   selector: 'app-root',
+ // template: "<store></store>",
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CarRentalWeb';
+  title = 'Center CNC';
   get isLoggedIn(){
     return this.authorizationService.isLoggedIn;
   }
@@ -15,4 +16,6 @@ export class AppComponent {
   onLogout(){
     this.authorizationService.logout();
   }
+
+
 }

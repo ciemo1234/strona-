@@ -1,19 +1,30 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" [routerLink]="['/home']">Car rental</a>
+    <a class="navbar-brand" [routerLink]="['/home']">Centrum CNC</a>
     <button class="navbar-" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
     <div ngbCollapse [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarNav">
         <ul ngbNav #nav="ngbNav" class="navbar-nav">
             <li ngbNavItem>
-                <a ngbNavLink [routerLink]="['/availablecars']">Availble cars</a>
+                <a ngbNavLink [routerLink]="['/availablecars']">Projekty</a>
             </li>
+            <li ngbNavItem>
+              <a ngbNavLink [routerLink]="['/wspolpraca']">Współpraca</a>
+          </li>
+          <li ngbNavItem>
+            <a ngbNavLink [routerLink]="['/kontakt']">Kontakt</a>
+        </li>
+        <li ngbNavItem>
+          <a ngbNavLink [routerLink]="['/store']">Sklep</a>
+      </li>
+
             <li ngbNavItem *ngIf="isLoggedIn">
-                <a ngbNavLink [routerLink]="['/myreservations']">My reservations</a>
+                <a ngbNavLink [routerLink]="['/myreservations']">Moje zamówienia</a>
             </li>
             <li ngbNavItem *ngIf="!isLoggedIn">
-                <a ngbNavLink [routerLink]="['/login']">Login</a>
+                <a ngbNavLink [routerLink]="['/login']">Zaloguj</a>
             </li>
             <li ngbNavItem *ngIf="isLoggedIn">
-                <a ngbNavLink (click)="onLogoutClicked()">Logout</a>
+                <a ngbNavLink (click)="onLogoutClicked()">Wyloguj</a>
             </li>
         </ul>
     </div>

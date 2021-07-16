@@ -1,6 +1,8 @@
+import { StoreModule } from './store/store.module';
+import { StoreComponent } from './store/store.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -11,6 +13,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarInfoComponent } from './car-info/car-info.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { WspolpracaComponent } from './wspolpraca/wspolpraca.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+//import { SklepComponent } from './sklep/sklep.component';
+
 
 @NgModule({
   declarations: [
@@ -20,21 +26,30 @@ import { LoginComponent } from './login/login.component';
     MyReservationsComponent,
     CarInfoComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    WspolpracaComponent,
+    KontaktComponent,
+    StoreComponent,
+
+
+
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,StoreModule,
     RouterModule.forRoot([
         {path: 'myreservations',component: MyReservationsComponent },
         {path: 'availablecars', component: AvailableCarsComponent },
         {path: 'login' , component: LoginComponent},
+        {path: 'kontakt',component:KontaktComponent},
+        {path: 'wspolpraca', component:WspolpracaComponent},
         {path: 'home' , component: HomeComponent},
         {path: '**' , redirectTo: '/home' , pathMatch: 'full'}
+
     ]),
     NgbModule,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue:"pl-PL"}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
